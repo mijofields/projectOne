@@ -31,7 +31,7 @@ var req = new Request(url); //this is for the fetch method, which I don't quite 
           for ( i = 0; i < response.articles.length; i ++) {
 
 
-            $("#newsfeed").append('<h3>' + response.articles[i].title + '</h3><p><a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p><hr>');
+            $("#newsfeed").append('<h3>' + response.articles[i].title + '</h3><p><a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p></a><p>Published: '+ moment(response.articles[i].publishedAt).format("MMM Do YYYY") + '</p><hr>');
 
 
           }; //end of for loop
@@ -39,7 +39,6 @@ var req = new Request(url); //this is for the fetch method, which I don't quite 
         });
 
         
-
       };
 
 
@@ -49,11 +48,8 @@ var req = new Request(url); //this is for the fetch method, which I don't quite 
       for (i = 0; i < buttons.length; i ++) {
 
         var Btn = $("<button>");
-        Btn.addClass("btn btn-success").attr("data-currency", buttons[i]).text(buttons[i]);
+        Btn.addClass("btn btn-success m-2 p-2").attr("data-currency", buttons[i]).text(buttons[i]);
         $("#news-buttons").append(Btn);
-
-
-
 
       } // end of for loop
 
@@ -75,7 +71,7 @@ $(document).on("click", ".btn", function() { //document cos dynamically created 
       $(".panel-title").text($(this).attr("data-currency") + " Headlines:"); 
 
 var url = 'https://newsapi.org/v2/everything?' +
-          'q=+cryptocurrency+AND+'+ $(this).attr("data-currency")+ '&' +
+          'q=+'+ $(this).attr("data-currency")+ '&' +
           'sources=bbc-news,associated-press,buzzfeed,bloomberg,business-insider,crypto-coins-news,financial-times,engadget,the-economist,the-wall-street-journal,google-news,next-big-future&' +
           'language=en&' +
           'apiKey=dc3fcd25bb3c4841be7cd4109d6d1273';
@@ -97,7 +93,7 @@ var url = 'https://newsapi.org/v2/everything?' +
 
           for ( i = 0; i < response.articles.length; i ++) {
 
-            $("#newsfeed").append('<h3>' + response.articles[i].title + '</h3><p><a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p><hr>');
+            $("#newsfeed").append('<h3>' + response.articles[i].title + '</h3><p><a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p></a><p>Published: '+ moment(response.articles[i].publishedAt).format("MMM Do YYYY") + '</p><hr>');
 
 
           }; //end of for loop
@@ -108,27 +104,6 @@ var url = 'https://newsapi.org/v2/everything?' +
 
       });
 
-
-
-
-fetch(req)
-    .then(function(response) {
-        console.log(response.json());
-
-    });
-
-var newurl = 'https://newsapi.org/v2/everything?' +
-          'q=+cryptocurrency+AND(+bitcoin+OR+ethereum+OR+litecoin+OR+ripple+OR+zcash)&' +
-          'sources=bbc-news,associated-press,buzzfeed,bloomberg,business-insider,crypto-coins-news,financial-times,engadget,the-economist,the-wall-street-journal,google-news,next-big-future,vice-news&' +
-          'language=en&' +
-          'apiKey=dc3fcd25bb3c4841be7cd4109d6d1273';
-
-var req = new Request(newurl);
-
-fetch(req)
-    .then(function(response) {
-        console.log(response.json());
-    });
 
 
 
