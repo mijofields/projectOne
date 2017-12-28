@@ -36,6 +36,8 @@ var req = new Request(url); //this is for the fetch method, which I don't quite 
 
             $("#newsfeed").append('<h3>' + response.articles[i].title + '</h3><p><a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p></a><p>Published: '+ moment(response.articles[i].publishedAt).format("MMM Do YYYY") + '</p>');
 
+           
+            setInterval("location.reload(true)", 300000);
 
           }; //end of for loop
 
@@ -58,7 +60,7 @@ var req = new Request(url); //this is for the fetch method, which I don't quite 
 
       };  //end 0f buttons
 
-$(document).on("click", ".btn", function() { //document cos dynamically created buttons
+$(document).on("click", ".btn", function ccynews () { //document cos dynamically created buttons
 
       event.preventDefault();
 
@@ -98,6 +100,7 @@ var url = 'https://newsapi.org/v2/everything?' +
 
             $("#newsfeed").append('<h3>' + response.articles[i].title + '</h3><p><a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p></a><p>Published: '+ moment(response.articles[i].publishedAt).format("MMM Do YYYY") + '</p>' );
 
+            setInterval("location.reload(true)", 300000);
 
           }; //end of for loop
 
