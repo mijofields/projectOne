@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 var cryptos = ["bitcoin", "etheruem", "ripple", "litecoin", "zcash"];
-var buttons = ["Headlines", "Bitcoin", "Ethereum", "Ripple", "Litecoin", "Zcash"];
+var buttons = ["Headlines", "New York Times", "Bitcoin", "Ethereum", "Ripple", "Litecoin", "Zcash"];
 
 var newsfeed = {
 
@@ -58,17 +58,55 @@ var req = new Request(url); //this is for the fetch method, which I don't quite 
 
       } // end of for loop
 
-      };  //end 0f buttons
+      };  //end of buttons
 
 $(document).on("click", ".btn", function ccynews () { //document cos dynamically created buttons
 
       event.preventDefault();
+      setInterval("location.reload(true)", 300000);
 
             if ($(this).attr("data-currency") === "Headlines" ) {
 
             $(".panel-title").text("CrypLife Headlines:");
 
             headlines();
+
+          } else if ($(this).attr("data-currency") === "New York Times" )  { 
+
+
+        $(".panel-title").text($(this).attr("data-currency") + " Headlines:");
+
+        var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+        url += '?' + $.param({
+        'api-key': "30372883e9d3418786ccec672e21332b",
+        'q': "crypto",
+        'sort': "newest"
+          });
+        $.ajax({
+         url: url,
+        method: 'GET',
+        }).done(function(response) {
+
+          $("#newsfeed").empty();
+            console.log(response);
+            console.log("length: "+ response.response.docs.length);
+
+           for ( i = 0; i < response.response.docs.length; i ++) { 
+
+
+            $("#newsfeed").append('<h3>' + response.response.docs[i].headline.main + '</h3><p><a href=' + response.response.docs[i].web_url + ' target="_blank" </a>' + response.response.docs[i].snippet + '</p></a><p>Published: '+ moment(response.response.docs[i].pub_date).format("MMM Do YYYY") + '</p>' );
+
+
+
+           }
+
+        }).fail(function(err) {
+        throw err;
+});
+
+
+
+
 
           } else {
 
@@ -77,7 +115,7 @@ $(document).on("click", ".btn", function ccynews () { //document cos dynamically
 
 var url = 'https://newsapi.org/v2/everything?' +
           'q=crypto+AND+'+ $(this).attr("data-currency")+ '&' +
-          'sources=bbc-news,associated-press,buzzfeed,bloomberg,business-insider,crypto-coins-news,financial-times,engadget,the-economist,the-wall-street-journal,google-news,next-big-future&' +
+          'sources=bbc-news,cnbc,associated-press,buzzfeed,bloomberg,hacker-news,business-insider,the-huffington-post,crypto-coins-news,financial-times,reuters,engadget,the-economist,the-wall-street-journal,google-news,next-big-future&' +
           'language=en&' +
           'apiKey=dc3fcd25bb3c4841be7cd4109d6d1273';
 
@@ -107,8 +145,6 @@ var url = 'https://newsapi.org/v2/everything?' +
 
             $("#newsfeed").append('<h3>' + response.articles[i].title + '</h3><p><a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p></a><p>Published: '+ moment(response.articles[i].publishedAt).format("MMM Do YYYY") + '</p>' );
 
-            setInterval("location.reload(true)", 300000);
-
           }}; //end of for loop
 
         }) };
@@ -116,6 +152,9 @@ var url = 'https://newsapi.org/v2/everything?' +
         
 
       });
+
+
+
 
 
 
