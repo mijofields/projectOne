@@ -1,7 +1,9 @@
 $(document).ready(function() {
 
 var cryptos = ["bitcoin", "etheruem", "ripple", "litecoin", "zcash"];
-var buttons = ["Headlines", "New York Times", "Bitcoin", "Ethereum", "Ripple", "Litecoin", "Zcash"];
+var buttons = ["Crypto Coins News", "New York Times", "Bitcoin", "Ethereum", "Ripple", "Litecoin", "Zcash"];
+
+
 
 var newsfeed = {
 
@@ -63,16 +65,16 @@ var req = new Request(url); //this is for the fetch method, which I don't quite 
 $(document).on("click", ".btn", function ccynews () { //document cos dynamically created buttons
 
       event.preventDefault();
-      setInterval("location.reload(true)", 300000);
+      
+            if ($(this).attr("data-currency") === "Crypto Coins News" ) {
 
-            if ($(this).attr("data-currency") === "Headlines" ) {
-
-            $(".panel-title").text("CrypLife Headlines:");
+            $(".panel-title").text($(this).attr("data-currency") + " Headlines:");
 
             headlines();
 
           } else if ($(this).attr("data-currency") === "New York Times" )  { 
 
+            setInterval("location.reload(true)", 300000);
 
         $(".panel-title").text($(this).attr("data-currency") + " Headlines:");
 
@@ -114,21 +116,19 @@ $(document).on("click", ".btn", function ccynews () { //document cos dynamically
       $(".panel-title").text($(this).attr("data-currency") + " Headlines:"); 
 
 var url = 'https://newsapi.org/v2/everything?' +
-          'q=crypto+AND+'+ $(this).attr("data-currency")+ '&' +
+          'q=crypto+AND+'+ '+'+ $(this).attr("data-currency")+ '&' +
           'sources=bbc-news,cnbc,associated-press,buzzfeed,bloomberg,hacker-news,business-insider,the-huffington-post,crypto-coins-news,financial-times,reuters,engadget,the-economist,the-wall-street-journal,google-news,next-big-future&' +
           'language=en&' +
           'apiKey=dc3fcd25bb3c4841be7cd4109d6d1273';
 
-          console.log(url);
-
+           setInterval("location.reload(true)", 300000);
 
           $.ajax({
           url: url,
           method: "GET"
         }).done(function(response) {
 
-
-          console.log(response);
+         
 
 
           $("#newsfeed").empty();
