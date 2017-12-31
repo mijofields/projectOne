@@ -11,6 +11,8 @@ var newsfeed = {
 
 }; //end of newsfeed
 
+           // setInterval("location.reload(true)", 10000);  this is for page update, incorporate
+
 
 var url = 'https://newsapi.org/v2/top-headlines?' +
           'sources=crypto-coins-news&' +
@@ -38,8 +40,6 @@ var req = new Request(url); //this is for the fetch method, which I don't quite 
 
             $("#newsfeed").append('<h3>' + response.articles[i].title + '</h3><p><a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p></a><p>Published: '+ moment(response.articles[i].publishedAt).format("MMM Do YYYY") + '</p>');
 
-           
-            setInterval("location.reload(true)", 300000);
 
           }; //end of for loop
 
@@ -74,7 +74,6 @@ $(document).on("click", ".btn", function ccynews () { //document cos dynamically
 
           } else if ($(this).attr("data-currency") === "New York Times" )  { 
 
-            setInterval("location.reload(true)", 300000);
 
         $(".panel-title").text($(this).attr("data-currency") + " Headlines:");
 
@@ -121,7 +120,6 @@ var url = 'https://newsapi.org/v2/everything?' +
           'language=en&' +
           'apiKey=dc3fcd25bb3c4841be7cd4109d6d1273';
 
-           setInterval("location.reload(true)", 300000);
 
           $.ajax({
           url: url,
@@ -160,24 +158,24 @@ var url = 'https://newsapi.org/v2/everything?' +
 
 
 
-      $.ajax({
-          url: "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,BTC,XRP,LTC,ZEC&tsyms=USD,EUR,GBP,JPY",
-          method: "GET"
-        }).done(function(response) {
+      // $.ajax({
+      //     url: "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,BTC,XRP,LTC,ZEC&tsyms=USD,EUR,GBP,JPY",
+      //     method: "GET"
+      //   }).done(function(response) {
 
-        	console.log(response);
+      //   	console.log(response);
 
-        });
+      //   });
 
 
-         $.ajax({
-          url: "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=60&aggregate=3&e=CCCAGG",
-          method: "GET"
-        }).done(function(response) {
+      //    $.ajax({
+      //     url: "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=60&aggregate=3&e=CCCAGG",
+      //     method: "GET"
+      //   }).done(function(response) {
 
-        	console.log(response);
+      //   	console.log(response);
 
-        });
+      //   });
 
 
         buttonMaker();
