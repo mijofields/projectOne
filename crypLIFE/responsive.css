@@ -208,6 +208,7 @@ License URL: http://themeforest.net/licenses/standard
         overflow: hidden !important;
         overflow-y: scroll !important;
         border-top: 1px solid #efefef;
+        background-color: #191919;
     }
 
     .header-section:not(.sidebar-header) ul.navbar-nav {
@@ -216,6 +217,7 @@ License URL: http://themeforest.net/licenses/standard
         padding: 0 15px;
         max-width: 750px;
         float: none !important;
+        background-color: #191919;
     }
 
     .header-section:not(.sidebar-header) ul.navbar-nav > li {
