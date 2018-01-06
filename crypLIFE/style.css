@@ -260,6 +260,74 @@ Black background color:         212121
   }
 }  
 
+.bit-pic {
+    background-image: url("bitty.png"); 
+    background-size: auto;
+    width: 100% auto; 
+    height: 500px;
+    background-repeat: no-repeat;;
+    background-size: 100% 100%;
+    background-position:  50% 50%;
+    
+}
+
+
+.ether-pic {
+    background-image: url("ether.jpg"); 
+    background-size: auto;
+    width: 100% auto; 
+    height: 500px;
+    background-repeat: no-repeat;;
+    background-size: 100% 100%;
+    background-position:  50% 50%;
+    
+}
+
+.inter-pic {
+    background-image: url("money.jpg"); 
+    background-size: auto;
+    width: 100% auto; 
+    height: 500px;
+    background-repeat: no-repeat;;
+    background-size: 100% 100%;
+    background-position:  50% 50%;
+    
+}
+
+.ltc-pic {
+    background-image: url("lite.jpg"); 
+    background-size: auto;
+    width: 100% auto; 
+    height: 500px;
+    background-repeat: no-repeat;;
+    background-size: 100% 100%;
+    background-position:  50% 50%;
+    
+}
+
+
+.xrp-pic {
+    background-image: url("rip.jpg"); 
+    background-size: auto;
+    width: 100% auto; 
+    height: 500px;
+    background-repeat: no-repeat;;
+    background-size: 100% 100%;
+    background-position:  50% 50%;
+    
+}
+
+
+.outro-pic {
+    background-image: url("outro.jpg"); 
+    background-size: auto;
+    width: 100% auto; 
+    height: 500px;
+    background-repeat: no-repeat;;
+    background-size: 100% 100%;
+    background-position:  50% 50%;
+    
+}
 
 
 
