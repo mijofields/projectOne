@@ -244,6 +244,52 @@ Black background color:         212121
 ============================================================================= */
 /* Body
 ============================================================================= */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+/*    border:1px solid #ccc;*/
+    background: black;
+    color: rgb(202, 255, 195);
+}
+
+
+
+.ticker {
+
+    font-color: black;
+    background-color: white;
+}
+
+
+.newsbox {
+
+margin-bottom: 20px;
+padding-bottom: 10px;
+border-bottom: 2px solid orange;
+
+
+}
+
+.newsfeed{
+
+height: 400px;
+overflow-y: scroll;
+
+
+}
+
+.newsitem {
+
+border-top: 1px dotted orange;
+
+
+}
+
+.swirl {
+
+background-image: url("swirl_pattern.png");
+
+}
 
 .photo-holder {
 
@@ -265,9 +311,9 @@ Black background color:         212121
     background-size: auto;
     width: 100% auto; 
     height: 500px;
-    background-repeat: no-repeat;;
-    background-size: 100% 100%;
-    background-position:  50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:  50%;
     
 }
 
@@ -277,9 +323,9 @@ Black background color:         212121
     background-size: auto;
     width: 100% auto; 
     height: 500px;
-    background-repeat: no-repeat;;
-    background-size: 100% 100%;
-    background-position:  50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:  50%;
     
 }
 
@@ -288,9 +334,9 @@ Black background color:         212121
     background-size: auto;
     width: 100% auto; 
     height: 500px;
-    background-repeat: no-repeat;;
-    background-size: 100% 100%;
-    background-position:  50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:  50%;
     
 }
 
@@ -299,9 +345,9 @@ Black background color:         212121
     background-size: auto;
     width: 100% auto; 
     height: 500px;
-    background-repeat: no-repeat;;
-    background-size: 100% 100%;
-    background-position:  50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:  50%;
     
 }
 
@@ -311,9 +357,9 @@ Black background color:         212121
     background-size: auto;
     width: 100% auto; 
     height: 500px;
-    background-repeat: no-repeat;;
-    background-size: 100% 100%;
-    background-position:  50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:  50%;
     
 }
 
@@ -323,9 +369,9 @@ Black background color:         212121
     background-size: auto;
     width: 100% auto; 
     height: 500px;
-    background-repeat: no-repeat;;
-    background-size: 100% 100%;
-    background-position:  50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:  50%;
     
 }
 

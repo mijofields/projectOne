@@ -155,16 +155,19 @@
 $(document).ready(function() {
 
 
+    var numberOfArticles = 4;
+
 function bitcoin () {
 
 
-  var numberOfArticles = 4;
+console.log("bitcoin working");
 
 
   var url = 'https://newsapi.org/v2/everything?' +
           'q=crypto+AND+bitcoin&' +
           'sources=bbc-news,cnbc,associated-press,buzzfeed,bloomberg,hacker-news,business-insider,the-huffington-post,crypto-coins-news,financial-times,reuters,engadget,the-economist,the-wall-street-journal,google-news,next-big-future&' +
           'language=en&' +
+          'sortBy=publishedAt&' + 
           'apiKey=dc3fcd25bb3c4841be7cd4109d6d1273';
 
 
@@ -179,7 +182,7 @@ function bitcoin () {
           $("#newsfeed1").empty();
 
 
-          for ( i = 0; i < numberOfArticles ; i++) { //need to fix this issue a counter on real articles
+          for ( i = 0; i < response.articles.length ; i++) { //need to fix this issue a counter on real articles
 
             if (response.articles[i].description === "" 
                ) {
@@ -189,7 +192,7 @@ function bitcoin () {
 
             } else {
 
-            $("#newsfeed1").append('<h3>' + response.articles[i].title + '</h3><p><a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p></a><p>Published: '+ moment(response.articles[i].publishedAt).format("MMM Do YYYY") + '</p>' );
+            $("#newsfeed1").append('<div class="newsitem"><h3>' + response.articles[i].title + '</h3>' + '<p>' + '<a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p></a><p>Published: '+ moment(response.articles[i].publishedAt).format("MMM Do YYYY") + '</p></div>' );
 
           }}; //end of for loop
 
@@ -198,14 +201,14 @@ function bitcoin () {
 
 function ethereum () {
 
-
-  var numberOfArticles = 4;
+  console.log("ethereum working");
 
 
   var url = 'https://newsapi.org/v2/everything?' +
           'q=crypto+AND+ethereum&' +
           'sources=bbc-news,cnbc,associated-press,buzzfeed,bloomberg,hacker-news,business-insider,the-huffington-post,crypto-coins-news,financial-times,reuters,engadget,the-economist,the-wall-street-journal,google-news,next-big-future&' +
           'language=en&' +
+          'sortBy=publishedAt&' + 
           'apiKey=dc3fcd25bb3c4841be7cd4109d6d1273';
 
 
@@ -220,30 +223,31 @@ function ethereum () {
           $("#newsfeed2").empty();
 
 
-          for ( var i = 0; i < numberOfArticles ; i++) { //need to fix this issue a counter on real articles
-            console.log(response.articles[i].description )
+          for ( var i = 0; i < response.articles.length ; i++) { //need to fix this issue a counter on real articles
+    
             if (response.articles[i].description === "" ) {
 
             } else {
 
 
-            $("#newsfeed2").append('<h3>' + response.articles[i].title + '</h3>' + '<p>' + '<a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p></a><p>Published: '+ moment(response.articles[i].publishedAt).format("MMM Do YYYY") + '</p>' );
+            $("#newsfeed2").append('<div class="newsitem"><h3>' + response.articles[i].title + '</h3>' + '<p>' + '<a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p></a><p>Published: '+ moment(response.articles[i].publishedAt).format("MMM Do YYYY") + '</p></div>' );
 
           }}; //end of for loop
 
-        }) };
+        }) }; //end of ethereum
 
 
         function litecoin () {
 
 
-  var numberOfArticles = 4;
+          console.log("litecoin working");
 
 
   var url = 'https://newsapi.org/v2/everything?' +
           'q=crypto+AND+litecoin&' +
           'sources=bbc-news,cnbc,associated-press,buzzfeed,bloomberg,hacker-news,business-insider,the-huffington-post,crypto-coins-news,financial-times,reuters,engadget,the-economist,the-wall-street-journal,google-news,next-big-future&' +
           'language=en&' +
+          'sortBy=publishedAt&' + 
           'apiKey=dc3fcd25bb3c4841be7cd4109d6d1273';
 
 
@@ -258,7 +262,7 @@ function ethereum () {
           $("#newsfeed3").empty();
 
 
-          for ( i = 0; i < numberOfArticles ; i++) { //need to fix this issue a counter on real articles
+          for ( i = 0; i < response.articles.length ; i++) { //need to fix this issue a counter on real articles
               
             if (response.articles[i].description === "" 
               ) {
@@ -268,22 +272,22 @@ function ethereum () {
 
             } else {
 
-            $("#newsfeed3").append('<h3>' + response.articles[i].title + '</h3><p><a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p></a><p>Published: '+ moment(response.articles[i].publishedAt).format("MMM Do YYYY") + '</p>' );
+            $("#newsfeed3").append('<div class="newsitem"><h3>' + response.articles[i].title + '</h3>' + '<p>' + '<a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p></a><p>Published: '+ moment(response.articles[i].publishedAt).format("MMM Do YYYY") + '</p></div>' );
 
           }}; //end of for loop
 
-        }) };
+        }) }; //end of litecoin
 
                 function ripple () {
 
-
-  var numberOfArticles = 4;
+                  console.log("ripple working");
 
 
   var url = 'https://newsapi.org/v2/everything?' +
           'q=crypto+AND+ripple&' +
           'sources=bbc-news,cnbc,associated-press,buzzfeed,bloomberg,hacker-news,business-insider,the-huffington-post,crypto-coins-news,financial-times,reuters,engadget,the-economist,the-wall-street-journal,google-news,next-big-future&' +
           'language=en&' +
+          'sortBy=publishedAt&' + 
           'apiKey=dc3fcd25bb3c4841be7cd4109d6d1273';
 
 
@@ -298,7 +302,7 @@ function ethereum () {
           $("#newsfeed4").empty();
 
 
-          for ( i = 0; i < numberOfArticles ; i++) { //need to fix this issue a counter on real articles
+          for ( i = 0; i < response.articles.length ; i++) { //need to fix this issue a counter on real articles
 
             if (response.articles[i].description === "" 
               ) {
@@ -308,19 +312,185 @@ function ethereum () {
 
             } else {
 
-            $("#newsfeed4").append('<h3>' + response.articles[i].title + '</h3><p><a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p></a><p>Published: '+ moment(response.articles[i].publishedAt).format("MMM Do YYYY") + '</p>' );
+           $("#newsfeed4").append('<div class="newsitem"><h3>' + response.articles[i].title + '</h3>' + '<p>' + '<a href=' + response.articles[i].url+ ' target="_blank" </a>' + response.articles[i].description + '</p></a><p>Published: '+ moment(response.articles[i].publishedAt).format("MMM Do YYYY") + '</p></div>' );
 
           }}; //end of for loop
 
-        }) };
+        }) }; //end of ripple
+
+
+    $(".jump").on("click", function() {
+
+
+      console.log("working");
+      $(this).attr("data-id");
+      var news = $(this).attr("data-id");
+
+      if ( news === "bitcoin")  {
+
 
         bitcoin();
+
+
+      } else if ( news = "ethereum") {
+
         ethereum();
+
+      } else if ( news === "litecoin"){
+
         litecoin();
+      } else {
+
         ripple();
 
+      }});
 
-      });
+
+     function newsTicker() {
+
+  //     $('.marquee')
+  // .bind('finished', function(){
+  //   //Change text to something else after first loop finishes
+  //   $(this).marquee('destroy');
+  //   //Load new content using Ajax and update the marquee container
+  //   $(this).html('Some new data loaded using ajax')
+  //     //Apply marquee plugin again
+  //     .marquee()
+  // })
+  // .marquee();
+
+          $('.marquee').marquee({
+        duration: 7500,
+        pauseOnHover: true
+});
+
+          $(".marquee").bind('finished', function(){
+
+            console.log("finished is working");
+
+          var url = 'https://newsapi.org/v2/top-headlines?' +
+          'sources=crypto-coins-news&' +
+          'apiKey=dc3fcd25bb3c4841be7cd4109d6d1273';
+
+          $.ajax({
+          url: url,
+          method: "GET"
+        }).done(function(response) {
+
+          console.log(response);
+
+          $(".marquee").marquee('destroy');
+
+            var newsTicker = '<a href=' + response.articles[0].url+ ' target="_blank" </a>' + response.articles[0].title + ', ' 
+              + '<a href=' + response.articles[1].url+ ' target="_blank" </a>' + response.articles[1].title + ',  '
+              + '<a href=' + response.articles[2].url+ ' target="_blank" </a>' + response.articles[2].title + ',  '
+              + '<a href=' + response.articles[3].url+ ' target="_blank" </a>' + response.articles[3].title + ',  '
+              + '<a href=' + response.articles[4].url+ ' target="_blank" </a>' + response.articles[4].title + ',  ' 
+              + '<a href=' + response.articles[5].url+ ' target="_blank" </a>' + response.articles[5].title + ',  '
+              + '<a href=' + response.articles[6].url+ ' target="_blank" </a>' + response.articles[6].title + ',  '
+              + '<a href=' + response.articles[7].url+ ' target="_blank" </a>' + response.articles[7].title + ',  '
+              + '<a href=' + response.articles[8].url+ ' target="_blank" </a>' + response.articles[8].title + '.';
+
+
+            console.log(newsTicker);
+
+
+            $(".marquee").html(newsTicker);
+
+
+                      $('.marquee').marquee({
+        duration: 7500,
+        pauseOnHover: true
+});
+
+
+
+
+        }); //end of done
+
+
+
+
+
+
+          }); //end of finished
+
+ }; //end of newsticker
+
+//     $('.marquee')
+//     .bind('beforeStarting', function () {
+
+//         console.log("before starting is working");
+
+//           var url = 'https://newsapi.org/v2/top-headlines?' +
+//           'sources=crypto-coins-news&' +
+//           'apiKey=dc3fcd25bb3c4841be7cd4109d6d1273';
+
+//           $.ajax({
+//           url: url,
+//           method: "GET"
+//         }).done(function(response) {
+
+//           console.log(response);
+
+//           $(".marquee").marquee('destroy');
+
+//             var newsTicker = '<a href=' + response.articles[0].url+ ' target="_blank" </a>' + response.articles[0].title + ', ' 
+//               + '<a href=' + response.articles[1].url+ ' target="_blank" </a>' + response.articles[1].title + ',  '
+//               + '<a href=' + response.articles[2].url+ ' target="_blank" </a>' + response.articles[2].title + ',  '
+//               + '<a href=' + response.articles[3].url+ ' target="_blank" </a>' + response.articles[3].title + ',  '
+//               + '<a href=' + response.articles[4].url+ ' target="_blank" </a>' + response.articles[4].title + ',  ' 
+//               + '<a href=' + response.articles[5].url+ ' target="_blank" </a>' + response.articles[5].title + ',  '
+//               + '<a href=' + response.articles[6].url+ ' target="_blank" </a>' + response.articles[6].title + ',  '
+//               + '<a href=' + response.articles[7].url+ ' target="_blank" </a>' + response.articles[7].title + ',  '
+//               + '<a href=' + response.articles[8].url+ ' target="_blank" </a>' + response.articles[8].title + '.';
+
+
+//             console.log(newsTicker);
+
+
+//             $(".marquee").html(newsTicker);
+
+
+
+        
+//      //end of for loop
+
+
+
+//         }); //end of done
+      
+//     }); //end of before starting
+
+//         $('.marquee').marquee({
+//         duration: 7500,
+//         pauseOnHover: true
+// });
+     //end of newsticker
+
+
+
+
+ //end of function
+
+
+  bitcoin();
+  ethereum();
+  litecoin();
+  ripple();
+  newsTicker();
+
+
+});
+        
+
+
+
+    
+
+
+      
+
 
 
 
