@@ -245,6 +245,96 @@ Black background color:         212121
 /* Body
 ============================================================================= */
 
+
+/*Fixed scroll tabs */
+#scroll-nav {
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 100px;
+    width: 60px; /* Set width */
+    z-index: 10000;
+}
+#scroll-nav a {
+    color: #fff;
+    display: block;
+    font: 12px Arial;
+    left: calc(100% - 60px); /* width */
+    text-align:center;
+    position: relative;
+    transition: left 0.3s ease 0s;
+    background-color: rgb(243, 72, 72); /*default color*/
+    text-decoration: none;
+    line-height: 1;
+    text-transform: uppercase;
+}
+#scroll-nav a:nth-child(2) { background-color: rgb(75, 193, 220); } /*alt color*/
+#scroll-nav a:nth-child(3) { background-color: rgb(77, 112, 168); } /*facebook*/
+#scroll-nav a:nth-child(4) { background-color: rgb(220, 78, 65); }/*google*/
+
+#scroll-nav i { 
+  display: inline-block;
+  margin: 0;
+  text-align: center; 
+  vertical-align: middle; 
+  width: 60px; /* Set width */
+  font-size:18px; 
+  font-weight: normal; 
+  margin-bottom:5px;
+}
+#scroll-nav a span:first-of-type { 
+  display: block; 
+  padding:10px 0;
+  width: 50px;
+}
+#scroll-nav a span:last-of-type { 
+  display: none; 
+  font-weight: bold; 
+  font-size: 12px;
+}
+#scroll-nav a span { 
+  text-align: center; 
+  vertical-align: middle; 
+  width: 180px; 
+  padding:10px 0;
+}
+#scroll-nav:hover { width: auto; }
+#scroll-nav a:hover { left: 0; }
+#scroll-nav a:hover span { display: inline-block; }
+#scroll-nav a span em { font-style: normal; }
+
+@media screen and (max-width: 1023px) {
+  #scroll-nav { 
+    right:auto; 
+    top:auto; 
+    bottom:0; 
+    left:0; 
+    width:100%; 
+    display: flex; 
+    text-align:center;
+  }
+  #scroll-nav a { 
+    display: inline-block; 
+    flex:0 1 100%; 
+    left:auto; 
+    margin-bottom: 0px;
+  }
+  #scroll-nav a:nth-child(2) { display:none; }
+  #scroll-nav a i { 
+    width:auto;
+    margin:0px;
+    display: inline-block;
+    vertical-align: middle;
+  }  
+  #scroll-nav a span:first-of-type {
+    display: inline-block; 
+    width: auto;
+  }
+  #scroll-nav:hover { width:100%; }
+  #scroll-nav a:hover span:last-of-type { 
+    display:none; 
+  }
+}
 .photo-holder {
 
     background-image: url("myimage1.jpg");
