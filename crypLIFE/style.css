@@ -261,7 +261,7 @@ Black background color:         212121
 }
 
 
-.newsbox {
+.newsbox {x`
 
 margin-bottom: 20px;
 padding-bottom: 10px;
@@ -307,7 +307,7 @@ background-color: #191919;
     }
 
     .price-boxes {
-        margin-top: 10%;
+        margin-top: 15px;
     }
     
     a {
