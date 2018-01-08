@@ -244,6 +244,23 @@ Black background color:         212121
 ============================================================================= */
 /* Body
 ============================================================================= */
+table {
+    border-collapse: collapse;
+    width: 90%;
+    min-height: 400px;
+}
+td {
+    padding: 1px;
+    color:white;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 .info-block-container {
 
     color: #191919;
@@ -334,7 +351,6 @@ background-color: #191919;
     }
 
     .price-boxes {
-        margin-top: 15px;
         padding-left: 20px;
     }.   
     
