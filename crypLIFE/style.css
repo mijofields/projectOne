@@ -287,7 +287,7 @@ border-top: 1px dotted orange;
 
 .swirl {
 
-background-image: url("swirl_pattern.png");
+background-color: #191919;
 
 }
 
@@ -452,6 +452,8 @@ background-image: url("swirl_pattern.png");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position:  50%;
+    background-color: #191919;
+    padding-bottom: 700px;
     
 }
 
