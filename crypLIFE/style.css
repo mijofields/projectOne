@@ -287,17 +287,13 @@ border-top: 1px dotted orange;
 
 .swirl {
 
-background-image: url("swirl_pattern.png");
+background-color: #191919;
 
 }
 
 /* prices*/
     body {
-<<<<<<< HEAD
-        background-color: white;
-=======
         background-color: #191919;
->>>>>>> 0f17ac6e9a358ca8877cf1c3758b8fdac3c63606
         font-size: 17px;
         color: white;
     }
@@ -456,6 +452,8 @@ background-image: url("swirl_pattern.png");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position:  50%;
+    background-color: #191919;
+    padding-bottom: 700px;
     
 }
 

@@ -348,16 +348,6 @@ function ethereum () {
 
      function newsTicker() {
 
-  //     $('.marquee')
-  // .bind('finished', function(){
-  //   //Change text to something else after first loop finishes
-  //   $(this).marquee('destroy');
-  //   //Load new content using Ajax and update the marquee container
-  //   $(this).html('Some new data loaded using ajax')
-  //     //Apply marquee plugin again
-  //     .marquee()
-  // })
-  // .marquee();
 
           $('.marquee').marquee({
         duration: 7500,
@@ -366,7 +356,7 @@ function ethereum () {
 
           $(".marquee").bind('finished', function(){
 
-            console.log("finished is working");
+          console.log("finished is working");
 
           var url = 'https://newsapi.org/v2/top-headlines?' +
           'sources=crypto-coins-news&' +
@@ -395,10 +385,10 @@ function ethereum () {
             console.log(newsTicker);
 
 
-            $(".marquee").html(newsTicker);
+        $(".marquee").html(newsTicker);
 
 
-                      $('.marquee').marquee({
+        $('.marquee').marquee({
         duration: 7500,
         pauseOnHover: true
 });
@@ -417,56 +407,7 @@ function ethereum () {
 
  }; //end of newsticker
 
-//     $('.marquee')
-//     .bind('beforeStarting', function () {
 
-//         console.log("before starting is working");
-
-//           var url = 'https://newsapi.org/v2/top-headlines?' +
-//           'sources=crypto-coins-news&' +
-//           'apiKey=dc3fcd25bb3c4841be7cd4109d6d1273';
-
-//           $.ajax({
-//           url: url,
-//           method: "GET"
-//         }).done(function(response) {
-
-//           console.log(response);
-
-//           $(".marquee").marquee('destroy');
-
-//             var newsTicker = '<a href=' + response.articles[0].url+ ' target="_blank" </a>' + response.articles[0].title + ', ' 
-//               + '<a href=' + response.articles[1].url+ ' target="_blank" </a>' + response.articles[1].title + ',  '
-//               + '<a href=' + response.articles[2].url+ ' target="_blank" </a>' + response.articles[2].title + ',  '
-//               + '<a href=' + response.articles[3].url+ ' target="_blank" </a>' + response.articles[3].title + ',  '
-//               + '<a href=' + response.articles[4].url+ ' target="_blank" </a>' + response.articles[4].title + ',  ' 
-//               + '<a href=' + response.articles[5].url+ ' target="_blank" </a>' + response.articles[5].title + ',  '
-//               + '<a href=' + response.articles[6].url+ ' target="_blank" </a>' + response.articles[6].title + ',  '
-//               + '<a href=' + response.articles[7].url+ ' target="_blank" </a>' + response.articles[7].title + ',  '
-//               + '<a href=' + response.articles[8].url+ ' target="_blank" </a>' + response.articles[8].title + '.';
-
-
-//             console.log(newsTicker);
-
-
-//             $(".marquee").html(newsTicker);
-
-
-
-        
-//      //end of for loop
-
-
-
-//         }); //end of done
-      
-//     }); //end of before starting
-
-//         $('.marquee').marquee({
-//         duration: 7500,
-//         pauseOnHover: true
-// });
-     //end of newsticker
 
 
 
@@ -484,55 +425,3 @@ function ethereum () {
 });
         
 
-
-
-    
-
-
-      
-
-
-
-
-
-
-
-
-
-      // $.ajax({
-      //     url: "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,BTC,XRP,LTC,ZEC&tsyms=USD,EUR,GBP,JPY",
-      //     method: "GET"
-      //   }).done(function(response) {
-
-      //   	console.log(response);
-
-      //   });
-
-
-      //    $.ajax({
-      //     url: "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=60&aggregate=3&e=CCCAGG",
-      //     method: "GET"
-      //   }).done(function(response) {
-
-      //   	console.log(response);
-
-      //   });
-
-
-        // buttonMaker();
-        // headlines();
-        // bitcoin();
-
-
- //end of document ready
-
-
-
-
-    //bitcoin, ethereum, ripple, litecoin, zcash
-
-    //new feed on crcy
-
-    //search for news in particular ccy
-
-    //fx converter coin to crcy
