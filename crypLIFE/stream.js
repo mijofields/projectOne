@@ -5,7 +5,7 @@ $(document).ready(function() {
 	//Format: {SubscriptionId}~{ExchangeName}~{FromSymbol}~{ToSymbol}
 	//Use SubscriptionId 0 for TRADE, 2 for CURRENT and 5 for CURRENTAGG
 	//For aggregate quote updates use CCCAGG as market
-	var subscription = ['5~CCCAGG~BTC~USD', '5~CCCAGG~ETH~USD', '5~CCCAGG~XRP~USD'];
+	var subscription = ['5~CCCAGG~BTC~USD', '5~CCCAGG~ETH~USD', '5~CCCAGG~LTC~USD', '5~CCCAGG~XRP~USD'];
 	socket.emit('SubAdd', { subs: subscription });
 	socket.on("m", function(message) {
 		var messageType = message.substring(0, message.indexOf("~"));
@@ -49,9 +49,6 @@ $(document).ready(function() {
 			}
 			else if (key == 'LASTVOLUMETO' || key == 'VOLUME24HOURTO') {
 				$('#' + key + '_' + from).text(CCC.convertValueToDisplay(tsym, current[key]));
-			}
-			else if (key == 'LASTVOLUME' || key == 'VOLUME24HOUR' || key == 'OPEN24HOUR' || key == 'OPENHOUR' || key == 'HIGH24HOUR' || key == 'HIGHHOUR' || key == 'LOWHOUR' || key == 'LOW24HOUR') {
-				$('#' + key + '_' + from).text(CCC.convertValueToDisplay(fsym, current[key]));
 			}
 			else {
 				$('#' + key + '_' + from).text(current[key]);
