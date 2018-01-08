@@ -72,3 +72,29 @@ $(document).ready(function() {
 		}
 	};
 });
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDoIQU3nsam8-aqDQ2-3Kq-vLXQNJsl9xw",
+    authDomain: "chat-8b589.firebaseapp.com",
+    databaseURL: "https://chat-8b589.firebaseio.com",
+    projectId: "chat-8b589",
+    storageBucket: "",
+    messagingSenderId: "198324721118"
+  };
+  firebase.initializeApp(config);
+            var db = new Firebase('https://new-project-84360.firebaseio.com/');
+            $('#send-button').click(function() {
+                var message = $('#text-message').val();
+                var name = $('#text-name').val();
+                db.push({
+                    message: message,
+                    name: name
+                });
+                $('#text-message').val("");
+            });
+            db.on('child_added', function(snapshot) {
+                var data = snapshot.val();
+                $('#messages').append(($('<b></b>').text("--> " + data.name + ": ")));
+                $('#messages').append(($('<h></h>').text(data.message)));
+                $('#messages').append(($('<p>').text("")));
+            });
