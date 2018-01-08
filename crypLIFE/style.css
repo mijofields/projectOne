@@ -246,7 +246,13 @@ Black background color:         212121
 ============================================================================= */
 .info-block-container {
 
-    color: black;
+    color: #191919;
+}
+
+#send-button{
+    color: #2600ff;
+    background-color: #d5b501;
+
 }
 
 
@@ -293,8 +299,16 @@ border-top: 2px groove rgba(255, 255, 255, 0.75);
 
 }
 
+h2{
+    padding-left: 7px;
+}
+
 h3 {
     text-align: center;
+}
+
+h2{
+    padding-left: 7px;
 }
 
 .swirl {
@@ -568,6 +582,7 @@ a {
     color: #189b0c;;
     outline: none !important;
     text-decoration: none !important;
+    padding-left: 5px;
 
     -webkit-transition: all 0.30s ease-in-out;
             transition: all 0.30s ease-in-out;
