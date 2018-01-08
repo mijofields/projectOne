@@ -343,7 +343,7 @@ background-color: #191919;
     overflow: hidden;
     position: fixed;
     right: 0;
-    top: 100px;
+    top: 400px;
     width: 60px; /* Set width */
     z-index: 10000;
 }
@@ -357,6 +357,8 @@ background-color: #191919;
     transition: left 0.3s ease 0s;
     background-color:  #191919; /*default color*/
     text-decoration: none;
+    border-radius:6px;
+
     line-height: 1;
     text-transform: uppercase;
 }
