@@ -49,11 +49,24 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="responsive.css">
 
+    
+
+
+
+
         <!--  Head JS Libs
         ======================================================================== -->
 <!--         <script src="modernizr-custom.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script> <!-- moment -->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script> <!-- moment -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--jquery-->
+
+<<<<<<< HEAD
+=======
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+>>>>>>> 0f17ac6e9a358ca8877cf1c3758b8fdac3c63606
     <!--jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -98,16 +111,16 @@
 <div class="navbar-collapse collapse">
 <ul class="nav navbar-nav">
 <li>
-<a href="#btc" title="Go to BTC">Bitcoin</a>
+<a class="jump" href="#btc" data-id="bitcoin" title="Go to BTC">Bitcoin</a>
 </li>
 <li>
-<a href="#eth" title="Go to ETH">Ethereum</a>
+<a class="jump" href="#eth" data-id="ethereum" title="Go to ETH">Ethereum</a>
 </li>
 <li>
-<a href="#ltc" title="Go to LTC">Litecoin</a>
+<a class="jump" href="#ltc" data-id="litecoin" title="Go to LTC">Litecoin</a>
 </li>
 <li>
-<a href="#xrp" title="Go to XRP">Ripple</a>
+<a class="jump" href="#xrp" data-id="ripple" title="Go to XRP">Ripple</a>
 </li>
 </ul>
 
@@ -120,7 +133,7 @@
 </div>
 </div>
 
-<div class="form-block header-search-form-block">
+<!-- <div class="form-block header-search-form-block">
 
 <div class="form-block-container">
 
@@ -136,16 +149,23 @@
 </div>
 </form>
 </div>
-</div>
+</div> -->
 
 </header>
-
+<div>Test</div>
 <div class="photo-holder">
 <a name="home"></a>
 
 
 
+
+
+
 </div>
+<br>
+<div class='marquee'>Hello Friends! Welcome to the crypLIFE website, brought to you by Najeeb Sabour, Dev Patel and Mike Fields.</div>
+<br>
+<div class="swirl">
 
 <a name="btc"></a>
 <div class="bit-pic"></div>
@@ -174,6 +194,7 @@
 
 
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <br>
     <h2>Bitcoin:</h2>
         
 </div>
@@ -181,9 +202,9 @@
 </div>
 
 
-<div class="row border border-dark">
+<div class="row newsbox">
 
-<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" id="newsfeed1">
+<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 newsfeed" id="newsfeed1">
 
 
 
@@ -195,11 +216,11 @@
 
     </div>
 
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 twitter">
 
         <!-- need to change the heading -->
 
-            <a class="twitter-timeline"  href="https://twitter.com/search?q=Bitcoin%20lang%3Aen" data-partner="tweetdeck"data-widget-id="949499912575770624">Tweets about Bitcoin lang:en</a>
+                <a class="twitter-timeline"  href="https://twitter.com/search?q=Bitcoin%20lang%3Aen" data-partner="tweetdeck"data-widget-id="949799605490810881">Tweets about Bitcoin lang:en</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           
 
@@ -209,17 +230,40 @@
     </div>
 
 </div>
+</div>
 <br>
 
 <!-- end of BTC -->
 
 <!-- ETH -->
+
+    <div class="swirl">
     <a name="eth"></a>
     <div class="ether-pic"></div>
     <div class="row">
+        <div class="col-md-4 price-boxes">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h6><a href="https://www.cryptocompare.com">Source: CryptoCompare.com</a></h6>
+                            <h2 class="price-display">ETH - USD <span class="price" id="PRICE_ETH"></span></h2>
+                            <h5>24h Change: <span id="CHANGE24HOUR_ETH"></span><span id="CHANGE24HOURPCT_ETH"></span><br></h5>
+                            <h5>Last Market: <span class="exchange" id="LASTMARKET_ETH"></span> <br></h5>
+                            <h5>Trade ID: <span id="LASTTRADEID_ETH"></span><br></h5>
+                            <h5>Open Day: <span id="OPEN24HOUR_ETH"></span><br></h5>
+                            <h5>High Day: <span id="HIGH24HOUR_ETH"></span><br></h5>
+                            <h5>Low Day: <span id="LOW24HOUR_ETH"></span><br></h5>
+                            <h5>24h Volume: <span id="VOLUME24HOUR_ETH"></span><br></h5>
+                            <h5>24h VolumeTo: <span id="VOLUME24HOURTO_ETH"></span><br></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
    
 
-<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <br>
     <h2>Ethereum:</h2>
 
 </div>
@@ -227,9 +271,9 @@
 </div>
 
 
-<div class="row border border-dark">
+<div class="row newsbox">
 
-<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" id="newsfeed2">
+<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 newsfeed" id="newsfeed2">
 
 
 
@@ -241,7 +285,7 @@
 
     </div>
 
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 twitter">
 
         <!-- need to change the heading -->
 
@@ -256,6 +300,7 @@
     </div>
 
 </div>
+</div>
 <br>
 
 <div class="inter-pic"></div>  
@@ -263,23 +308,27 @@
 <!--end of ETH-->
 
 <!--litecoin-->
+<div class="swirl">
 <a name="ltc"></a>
 <div class="ltc-pic"></div>
 
     <div class="row">
-     <!--Dev -->
+        
+
 
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <br>
     <h2>Litecoin:</h2>
 
-</div>
 
 </div>
 
+</div>
 
-<div class="row border border-dark">
 
-<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" id="newsfeed3">
+<div class="row newsbox">
+
+<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 newsfeed" id="newsfeed3">
 
 
 
@@ -291,7 +340,7 @@
 
     </div>
 
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 twitter">
 
         <!-- need to change the heading -->
 
@@ -307,11 +356,13 @@
     </div>
 
 </div>
+</div>
 <br>
 
 <!--end of ltc-->
 
 <!--ripple-->
+<div class="swirl">
  <a name="xrp"></a>
 <div class="xrp-pic"></div>
 
@@ -319,6 +370,7 @@
        
 
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <br>
     <h2>Ripple:</h2>
 
 </div>
@@ -326,9 +378,9 @@
 </div>
 
 
-<div class="row border border-dark">
+<div class="row newsbox">
 
-<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8" id="newsfeed4">
+<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 newsfeed" id="newsfeed4">
 
 
 
@@ -340,11 +392,11 @@
 
     </div>
 
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 twitter">
 
         <!-- need to change the heading -->
 
-                <a class="twitter-timeline"  href="https://twitter.com/search?q=ripple%20lang%3Aen" data-partner="tweetdeck"data-widget-id="949649118070272001">Tweets about ripple lang:en</a>
+                <a class="twitter-timeline"  href="https://twitter.com/search?q=ripple%20lang%3Aen" data-partner="tweetdeck"data-widget-id="949649118070272001">Tweets about Ripple</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           
           
@@ -355,6 +407,7 @@
 
     </div>
 
+</div>
 </div>
 <br>
 
@@ -396,14 +449,17 @@
                                             <div class="widget-block-body">
 
 
+
+
+
                                                 <!-- Logo -->
-                                                <a href="#" title="PLUME">
+                                                <a href="#" title="crypLIFE">
                                                     <h1>crypLIFE</h1></a>
                                                     <!-- /End Logo -->
 
 
                                                 <!-- GAP 20px -->
-                                                <div class="gap gap-20"></div>
+                                      <!--           <div class="gap gap-20"></div> -->
 
 
                                                 <!-- Secondary Menu -->
@@ -485,11 +541,19 @@
         <script type="text/javascript" src="bootstrap.min.js"></script>
         <script type="text/javascript" src="plugins.js"></script>
         <script type="text/javascript" src="scripts.js"></script> -->
+<<<<<<< HEAD
          <script type="text/javascript" src="newsfeed.js"></script>gi
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.js"></script>
+=======
+         <script type="text/javascript" src="newsfeed.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js"></script> <!--marquee-->
+
+    <script src="stream.js"></script>
+>>>>>>> 0f17ac6e9a358ca8877cf1c3758b8fdac3c63606
     <script src="ccc-streamer-utilities.js"></script>
     <script src="stream.js"></script>
+
 
 
 

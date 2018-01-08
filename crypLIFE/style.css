@@ -244,10 +244,60 @@ Black background color:         212121
 ============================================================================= */
 /* Body
 ============================================================================= */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+/*    border:1px solid #ccc;*/
+    background: black;
+    color: rgb(202, 255, 195);
+}
+
+
+
+.ticker {
+
+    font-color: black;
+    background-color: white;
+}
+
+
+.newsbox {
+
+margin-bottom: 20px;
+padding-bottom: 10px;
+border-bottom: 2px solid orange;
+
+
+}
+
+.newsfeed{
+
+height: 400px;
+overflow-y: scroll;
+
+
+}
+
+.newsitem {
+
+border-top: 1px dotted orange;
+
+
+}
+
+.swirl {
+
+background-image: url("swirl_pattern.png");
+
+}
 
 /* prices*/
     body {
+<<<<<<< HEAD
         background-color: white;
+=======
+        background-color: #191919;
+>>>>>>> 0f17ac6e9a358ca8877cf1c3758b8fdac3c63606
         font-size: 17px;
         color: white;
     }
@@ -278,7 +328,7 @@ Black background color:         212121
     }
 
     span {
-        color: orange;
+        color: #c5c5c5;
     }
 
     .up {
@@ -302,7 +352,7 @@ Black background color:         212121
     z-index: 10000;
 }
 #scroll-nav a {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.75);
     display: block;
     font: 12px Arial;
     left: calc(100% - 60px); /* width */
@@ -316,7 +366,7 @@ Black background color:         212121
 }
 #scroll-nav a:nth-child(2) { background-color: rgb(75, 193, 220); } /*alt color*/
 #scroll-nav a:nth-child(3) { background-color: rgb(77, 112, 168); } /*facebook*/
-#scroll-nav a:nth-child(4) { background-color: rgb(220, 78, 65); }/*google*/
+#scroll-nav a:nth-child(4) { background-color:#191919; }/*google*/
 
 #scroll-nav i { 
   display: inline-block;
@@ -401,9 +451,9 @@ Black background color:         212121
     background-size: auto;
     width: 100% auto; 
     height: 500px;
-    background-repeat: no-repeat;;
-    background-size: 100% 100%;
-    background-position:  50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:  50%;
     
 }
 
@@ -413,9 +463,9 @@ Black background color:         212121
     background-size: auto;
     width: 100% auto; 
     height: 500px;
-    background-repeat: no-repeat;;
-    background-size: 100% 100%;
-    background-position:  50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:  50%;
     
 }
 
@@ -424,9 +474,9 @@ Black background color:         212121
     background-size: auto;
     width: 100% auto; 
     height: 500px;
-    background-repeat: no-repeat;;
-    background-size: 100% 100%;
-    background-position:  50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:  50%;
     
 }
 
@@ -435,9 +485,9 @@ Black background color:         212121
     background-size: auto;
     width: 100% auto; 
     height: 500px;
-    background-repeat: no-repeat;;
-    background-size: 100% 100%;
-    background-position:  50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:  50%;
     
 }
 
@@ -447,9 +497,9 @@ Black background color:         212121
     background-size: auto;
     width: 100% auto; 
     height: 500px;
-    background-repeat: no-repeat;;
-    background-size: 100% 100%;
-    background-position:  50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:  50%;
     
 }
 
@@ -459,9 +509,9 @@ Black background color:         212121
     background-size: auto;
     width: 100% auto; 
     height: 500px;
-    background-repeat: no-repeat;;
-    background-size: 100% 100%;
-    background-position:  50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:  50%;
     
 }
 
