@@ -379,7 +379,8 @@ function ethereum () {
               + '<a href=' + response.articles[5].url+ ' target="_blank" </a>' + response.articles[5].title + ',  '
               + '<a href=' + response.articles[6].url+ ' target="_blank" </a>' + response.articles[6].title + ',  '
               + '<a href=' + response.articles[7].url+ ' target="_blank" </a>' + response.articles[7].title + ',  '
-              + '<a href=' + response.articles[8].url+ ' target="_blank" </a>' + response.articles[8].title + '.';
+              + '<a href=' + response.articles[8].url+ ' target="_blank" </a>' + response.articles[8].title + ',  '
+              + '<a href="https://newsapi.org" target="_blank" </a>' + "Powered by News API" ;
 
 
             console.log(newsTicker);
