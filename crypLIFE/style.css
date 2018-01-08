@@ -261,12 +261,12 @@ Black background color:         212121
 }
 
 
-.newsbox {x`
+.newsbox {
 
 margin-bottom: 20px;
 padding-bottom: 10px;
-border-bottom: 2px solid orange;
-
+border-bottom: 2px groove rgba(255, 255, 255, 0.75);
+padding-left: 20px;
 
 }
 
@@ -276,13 +276,18 @@ height: 400px;
 overflow-y: scroll;
 
 
+
 }
 
 .newsitem {
 
-border-top: 1px dotted orange;
+border-top: 2px groove rgba(255, 255, 255, 0.75);
 
 
+}
+
+h3 {
+    text-align: center;
 }
 
 .swirl {
@@ -300,18 +305,20 @@ background-color: #191919;
 
     .panel {
         background-color:#191919;
+
     }
 
     .panel-body {
-        padding-left: 10%;
+        padding-left: 20px;
     }
 
     .price-boxes {
         margin-top: 15px;
-    }
+        padding-left: 20px;
+    }.   
     
     a {
-        color:white;
+        color:#189b0c;
     }
 
     .price {
@@ -549,7 +556,7 @@ body.stopScroll {
 /* Wrapper
 ----------------------------------------------------------------------------- */
 a {
-    color: #2791d8;
+    color: #189b0c;;
     outline: none !important;
     text-decoration: none !important;
 
@@ -563,7 +570,7 @@ a.no-transition {
 
 a:hover,
 a:focus {
-    color: #202020;
+    color: white;
 }
 
 
